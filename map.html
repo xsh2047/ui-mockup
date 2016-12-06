@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Farmland</title>
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+        <script type="text/javascript" src="js/funct.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <nav>
+                    <a class='logo' href="index.html">
+                        <img src="img/home.png" alt="logo" />
+                    </a>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="map.html">Map of my farm</a></li>
+                              <li><a href="rental.html">My Rentals</a></li>
+                              <li><a href="rental.html#crops">My Crops</a></li>
+                              <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="market.html">Market</a></li>
+                              <li><a href="news.html">News</a></li>
+                              <li><a href="discussions.html">Discussions</a></li>
+                              <li><a href="rentals.html">Rentals</a></li>
+                              <li><a href="attacks.html">Predial Larceny</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="map.html">Map</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <a class="flat-btn flat-btn-warning" href="signup.html">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        SignUp
+                    </a>
+                    <a class="flat-btn flat-btn-default" href="login.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        LogIn
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+
+            <div class="container-fluid projects content">
+                <h1 class="map-heading heading">Map of Farm</h1>
+                <div id="map">
+                    <div class="device dev1" data-toggle="tooltip" data-placement="top" title="Device 1">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                    <div class="device dev2" data-toggle="tooltip" data-placement="top" title="Device 2">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                    <div class="device dev3" data-toggle="tooltip" data-placement="top" title="Device 3">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                    <div class="device dev4" data-toggle="tooltip" data-placement="top" title="Device 4">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                    <div class="device dev5" data-toggle="tooltip" data-placement="top" title="Device 5">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                    <div class="device dev6" data-toggle="tooltip" data-placement="top" title="Device 6">
+                        <a href="report.html">
+                            <span class="glyphicon glyphicon-map-marker"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="map-btns">
+                    <p class="heading">
+                        Click a device to view the report
+                    </p>
+                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add Device</a>
+                    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal1" id="edit-btn">Edit</a>
+                    <a href="report.html" class="btn btn-primary">Reports</a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add a Device</h4>
+                  </div>
+                  <div class="modal-body">
+                    <input type="text" name="name" id="device-name" class="form-control" placeholder="Device Name">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4>Vertical</h4>
+                            <select class="form-control" id="sel1">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4>Horizontal</h4>
+                            <select class="form-control" id="sel2">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                                <option>32</option>
+                                <option>33</option>
+                                <option>34</option>
+                                <option>35</option>
+                                <option>36</option>
+                                <option>37</option>
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="add-device" name="button">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Add a Device</h4>
+                  </div>
+                  <div class="modal-body">
+                    <input type="text" name="name" id="device-name1" class="form-control" placeholder="Device Name">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4>Vertical</h4>
+                            <select class="form-control" id="sel3">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6">
+                            <h4>Horizontal</h4>
+                            <select class="form-control" id="sel4">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                                <option>32</option>
+                                <option>33</option>
+                                <option>34</option>
+                                <option>35</option>
+                                <option>36</option>
+                                <option>37</option>
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="remove-device">Remove</button>
+                    <button type="button" class="btn btn-warning" id="edit-device" name="button">Save Changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer">
+                <div class="row">
+                    <div class="links col-lg-4">Home</div>
+                    <div class="links col-lg-4">About</div>
+                    <div class="col-lg-4">Contact Us</div>
+                </div>
+                <span class="copyright">Copyright © 2016</span>
+            </div>
+    </body>
+</html>

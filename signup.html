@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Farmland</title>
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <nav>
+                    <a class='logo' href="index.html">
+                        <img src="img/home.png" alt="logo" />
+                    </a>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">My Account
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="map.html">Map of my farm</a></li>
+                              <li><a href="rental.html">My Rentals</a></li>
+                              <li><a href="rental.html#crops">My Crops</a></li>
+                              <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="market.html">Market</a></li>
+                              <li><a href="news.html">News</a></li>
+                              <li><a href="discussions.html">Discussions</a></li>
+                              <li><a href="rentals.html">Rentals</a></li>
+                              <li><a href="attacks.html">Predial Larceny</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="map.html">Map</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <a class="flat-btn flat-btn-warning" href="signup.html">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        SignUp
+                    </a>
+                    <a class="flat-btn flat-btn-default" href="login.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        LogIn
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+            <div class="container-fluid signup content">
+                <h1 class="signup-heading heading">Why Sign Up?</h1>
+                <p class="heading">
+                    Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                </p>
+                <div class="signup-panel panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SignUp</h3>
+                    </div>
+                    <div class="panel-body">
+                        <label><b>Name</b></label>
+                        <input type="text" name="name" required>
+                        <br>
+                        <label><b>Email</b></label>
+                        <input type="text" name="email" required>
+                        <br>
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <br>
+                        <label><b>Confirm</b></label>
+                        <input type="password" placeholder="Enter Password" name="pswc" required>
+                        <br>
+                        <label><b>Address</b></label>
+                        <input type="text" name="address" required>
+                        <br>
+                        <label><b>Location</b></label>
+                        <input type="text" name="location" required>
+                        <br>
+                        <label><b>Description of Farm</b></label>
+                        <br>
+                        <textarea name="description" rows="8" cols="40"></textarea>
+                        <br>
+                        <button class="btn btn-success" type="submit">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="row">
+                    <div class="links col-lg-4">Home</div>
+                    <div class="links col-lg-4">About</div>
+                    <div class="col-lg-4">Contact Us</div>
+                </div>
+                <span class="copyright">Copyright © 2016</span>
+            </div>
+    </body>
+</html>
