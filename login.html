@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/funct.js"></script>
     </head>
     <body>
         <header>
@@ -44,10 +45,6 @@
                         <span class="glyphicon glyphicon-pencil"></span>
                         SignUp
                     </a>
-                    <a class="flat-btn flat-btn-default" href="login.html">
-                        <span class="glyphicon glyphicon-user"></span>
-                        LogIn
-                    </a>
                 </nav>
             </div>
         </header>
@@ -59,18 +56,36 @@
                     </div>
                     <div class="panel-body">
                         <label><b>Email</b></label>
-                        <input type="text" placeholder="Email" name="email" required>
+                        <input type="text" placeholder="Email" name="email" id="login-email" required>
                         <br>
                         <label><b>Password</b></label>
-                        <input type="password" placeholder="Password" name="psw" required>
+                        <input type="password" placeholder="Password" name="psw" id="login-pass" required>
                         <br>
-                        <button class="btn btn-success" type="submit">Login</button>
+                        <button class="btn btn-success" type="button" id="login-btn">Login</button>
 
                         <p>
-                            Forgot password? <a href="#">Click here</a>
+                            Forgot password? <a href="#" data-toggle="modal" data-target="#myModal">Click here</a>
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Password Reset</h4>
+                  </div>
+                  <div class="modal-body">
+                      <input type="text" name="email" id="email-reset" class="form-control" placeholder="Email">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" name="button" class="btn btn-warning" id="request-change">Reset Password</button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="footer">

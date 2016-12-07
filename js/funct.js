@@ -1,4 +1,25 @@
 $(function () {
+    //For Login
+    $("#request-change").click(function(){
+        email = $("#email-reset").val();
+        $("#myModal .modal-body").html("<h2>Password reset has been sent to <b>" + email + "</b></h2>");
+        $("#request-change").remove();
+    });
+
+
+    $("#login-btn").click(function(){
+        email = $('#login-email').val();
+        pass = $('#login-pass').val();
+        if( email === 'admin@admin.com' && pass === 'adminpass'){
+            window.location.replace("index.html");
+        }else {
+            $('header').append('<div class="alert alert-warning alert-dismissible"> \
+                                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> \
+                                      <strong>Error!</strong> Incorrect Username or Password. \
+                                    </div>');
+
+        }
+    });
     //For Device
     var devcount = 6;
 
