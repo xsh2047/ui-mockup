@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/funct.js"></script>
     </head>
     <body>
         <header>
@@ -59,7 +60,7 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                       Create
                     </button>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal1">
+                    <button type="button" class="btn btn-info" id="edit-rentals" data-toggle="modal" data-target="#myModal1">
                       Edit
                     </button>
                     <table class="table table-striped">
@@ -113,8 +114,8 @@
                             <div class="card-content">
                                 <h1>Some Crop</h1>
                                 <p>Description for some crop.</p>
-                            </div>
                             <div class="card-action">
+                            </div>
                               <a href="#"  data-toggle="modal" data-target="#myModal3">Edit</a>
                             </div>
                           </div>
@@ -182,7 +183,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" id="add-device" name="button">Add</button>
+                    <button type="button" class="btn btn-success" id="rental-add" name="button">Add</button>
                   </div>
                 </div>
               </div>
@@ -203,8 +204,8 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Remove</button>
-                    <button type="button" class="btn btn-success" id="add-device" name="button">Save</button>
+                    <button type="button" class="btn btn-danger" id="remove-rental" data-dismiss="modal">Remove</button>
+                    <button type="button" class="btn btn-success" id="save-rental" name="button">Save</button>
                   </div>
                 </div>
               </div>
