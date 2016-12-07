@@ -90,8 +90,64 @@ $(function () {
         $('#myModal1').modal('toggle');
     });
 
-    $().click(function() {
+    //For Crops
+    col = 1;
+    var cropSel;
+    $('#add-crop').click(function() {
+        col_sel = col % 2;
+        name = $('input#name-crop').val();
+        content = $('input#content-crop').val();
+        price = $('input#price-crop').val();
 
+        crop = ' \
+        <div class="card horizontal"> \
+          <div class="card-image">  \
+            <img class="crop-img" src="img/crop.png"> \
+          </div> \
+          <div class="card-stacked"> \
+            <div class="card-content"> \
+                <h3 class="crop-cost">$'+ price +'</h3> \
+                <h1>'+ name +'</h1> \
+                <p>'+ content +'</p> \
+            </div> \
+            <div class="card-action"> \
+              <a href="#" data-toggle="modal" data-target="#myModal3" class="edit-crop">Edit</a> \
+            </div> \
+          </div> \
+        </div>'
+
+        if(col_sel == 1){
+            $('#col1').append(crop);
+        }else{
+            $('#col2').append(crop);
+        }
+        $('.edit-crop').click(function() {
+            cropSel = $(this).parents().eq(3);
+        });
+        col++;
+        $('#myModal2').modal('toggle');
+    });
+
+    $('.content').on('click', '.edit-crop', function(){
+        cropSel = $(this).parents().eq(2);
+    });
+
+    $('#save-crop').click(function() {
+        name = $('input#name-crop1').val();
+        content = $('input#content-crop1').val();
+        price = $('input#price-crop1').val();
+
+        cropContent =' \
+            <h3 class="crop-cost">$'+ price +'</h3> \
+            <h1>'+ name +'</h1> \
+            <p>'+ content +'</p> \
+        '
+        cropSel.children().children()[1].innerHTML = cropContent;
+        $('#myModal3').modal('toggle');
+    });
+
+    $('#remove-crop').click(function() {
+        cropSel.remove();
     });
 
     String.prototype.replaceAll = function(pattern, replacement) {

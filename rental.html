@@ -101,22 +101,23 @@
                 <div class="row">
                     <div class="row">
                         <h1 class="heading" id="crops">Crops</h1>
-                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal2">
+                        <button type="button" class="btn btn-warning" data-toggle="modal" id="crop-add" data-target="#myModal2">
                           Add
                         </button>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" id="col1">
                         <div class="card horizontal">
                           <div class="card-image">
                             <img class="crop-img" src="img/crop.png">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
+                                <h3 class="crop-cost">$24</h3>
                                 <h1>Some Crop</h1>
                                 <p>Description for some crop.</p>
-                            <div class="card-action">
                             </div>
-                              <a href="#"  data-toggle="modal" data-target="#myModal3">Edit</a>
+                            <div class="card-action">
+                                <a href="#"  data-toggle="modal" data-target="#myModal3" class="edit-crop">Edit</a>
                             </div>
                           </div>
                         </div>
@@ -126,27 +127,29 @@
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
+                                <h3 class="crop-cost">$24</h3>
                                 <h1>Some Crop</h1>
                                 <p>Description for some crop.</p>
                             </div>
                             <div class="card-action">
-                              <a href="#" data-toggle="modal" data-target="#myModal3">Edit</a>
+                              <a href="#" data-toggle="modal" data-target="#myModal3" class="edit-crop">Edit</a>
                             </div>
                           </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" id="col2">
                         <div class="card horizontal">
                           <div class="card-image">
                             <img class="crop-img" src="img/crop.png">
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
+                                <h3 class="crop-cost">$24</h3>
                                 <h1>Some Crop</h1>
                                 <p>Description for some crop.</p>
                             </div>
                             <div class="card-action">
-                              <a href="#" data-toggle="modal" data-target="#myModal3">Edit</a>
+                              <a href="#" data-toggle="modal" data-target="#myModal3" class="edit-crop">Edit</a>
                             </div>
                           </div>
                         </div>
@@ -156,11 +159,12 @@
                           </div>
                           <div class="card-stacked">
                             <div class="card-content">
+                                <h3 class="crop-cost">$24</h3>
                                 <h1>Some Crop</h1>
                                 <p>Description for some crop.</p>
                             </div>
                             <div class="card-action">
-                              <a href="#" data-toggle="modal" data-target="#myModal3">Edit</a>
+                              <a href="#" data-toggle="modal" data-target="#myModal3" class="edit-crop">Edit</a>
                             </div>
                           </div>
                         </div>
@@ -219,12 +223,13 @@
                     <h4 class="modal-title" id="myModalLabel">Add a Crop</h4>
                   </div>
                   <div class="modal-body">
-
-
+                      <input type="text" name="name" id="name-crop" class="form-control" placeholder="Name">
+                      <input type="text" name="content" id="content-crop" class="form-control" placeholder="Description">
+                      <input type="number" name="price" id="price-crop" class="form-control" placeholder="Cost">
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" id="add-device" name="button">Add</button>
+                    <button type="button" class="btn btn-success" id="add-crop" name="button">Add</button>
                   </div>
                 </div>
               </div>
@@ -238,13 +243,14 @@
                     <h4 class="modal-title" id="myModalLabel">Edit Crop</h4>
                   </div>
                   <div class="modal-body">
-
-
+                      <input type="text" name="name" id="name-crop1" class="form-control" placeholder="Name">
+                      <input type="text" name="content" id="content-crop1" class="form-control" placeholder="Description">
+                      <input type="number" name="price" id="price-crop1" class="form-control" placeholder="Cost">
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Remove</button>
-                    <button type="button" class="btn btn-success" id="add-device" name="button">Save</button>
+                    <button type="button" class="btn btn-danger" id="remove-crop" data-dismiss="modal">Remove</button>
+                    <button type="button" class="btn btn-success" id="save-crop" name="button">Save</button>
                   </div>
                 </div>
               </div>

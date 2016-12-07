@@ -676,3 +676,8 @@ div.img3{
 .attack-btn{
     display: block;
 }
+
+.crop-cost{
+    float: right;
+    padding-right: 1em;
+}
